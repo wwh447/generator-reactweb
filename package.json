@@ -1,6 +1,6 @@
 {
   "name": "generator-reactweb",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React WEB 项目包含基本：react15 + react-router + webpack2 + ES2015",
   "main": "index.js",
   "scripts": {
@@ -8,9 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git.oschina.net/eded/generator-reactweb.git"
+    "url": "https://github.com/wwh447/generator-reactweb.git"
   },
-  "homepage": "http://git.oschina.net/eded/generator-reactweb",
+  "homepage": "https://github.com/wwh447/generator-reactweb",
+  "bugs": {
+    "url": "https://github.com/wwh447/generator-reactweb/issues"
+  },
   "keywords": [
     "yeoman-generator"
   ],

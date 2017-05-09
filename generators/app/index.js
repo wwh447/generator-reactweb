@@ -1,12 +1,14 @@
 // /generators/app/index.js
 
+'use strict';
+
 var path = require('path');
 var chalk = require('chalk');    //不同颜色的info
 var util = require('util');
-var yeoman = require('yeoman-generator');
+var generators = require('yeoman-generator');
 var yosay = require('yosay');    //yeoman弹出框
 var path = require('path');
-var Reactpackage = yeoman.Base.extend({
+var Reactpackage = yeoman.generators.Base.extend({
     info: function() {
         this.log(chalk.green(
             '我要创建自己的 React WEB APP !'
@@ -41,7 +43,7 @@ var Reactpackage = yeoman.Base.extend({
     /** 结束 */
     end: function() {
         this.log( yosay('棒棒哒了！应用已成功创建!') );
-    }
+    },
 });
 
 module.exports = Reactpackage;
