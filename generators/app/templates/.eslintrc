@@ -1,0 +1,10 @@
+{
+  "parser": "babel-eslint",
+  "plugins": ["react"],
+  "rules": {
+    // 行最长 120 字符.
+    //"max-len": ["error", 120],
+    // 在 JSX 中强制布尔属性符号.
+    "react/jsx-boolean-value": "error",
+  }
+}
