@@ -62,7 +62,7 @@ module.exports = class extends Generator {
    */
   writing() {
 
-    this.log( this.fs.mkdirSync );
+    this.log( this.fs["mkdirSync"] );
 
     const filelist = [
       'src',
