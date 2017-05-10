@@ -76,7 +76,7 @@ module.exports = class extends Generator {
       this.fs.copy(
         this.templatePath(item),
         this.destinationPath(item)
-      );
+      )
     ));
 
     fs.mkdirSync('dist');
