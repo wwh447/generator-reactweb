@@ -20,8 +20,8 @@ module.exports = class extends Generator {
 
     // 获取 AppName.
     this.appName = path.basename(process.cwd());
-    // 获取 Author.
-    this.appAuthor = this.git.name();
+    // 设置 Author.
+    this.appAuthor = "Eded.Wang";
   }
 
   /**
