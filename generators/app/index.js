@@ -22,6 +22,7 @@ module.exports = class extends Generator {
     );
     */
 
+    /*
     this.log("拷贝 [src] ...");
     this.fs.copy(
       this.templatePath('src'),
@@ -49,6 +50,7 @@ module.exports = class extends Generator {
       this.templatePath('webpack.config.js'),
       this.destinationPath('webpack.config.js')
     );
+    */
 
     /*
     git.name()
@@ -63,6 +65,7 @@ module.exports = class extends Generator {
      * fs 是 mem-fs-editor 实例
      * @Link https://github.com/sboudrias/mem-fs-editor
      */
+
     this.fs.copyTpl(
       this.templatePath('public/index.html'),
       this.destinationPath('public/index.html'),
@@ -75,6 +78,18 @@ module.exports = class extends Generator {
 
     this.log("准备创建 package...");
 
+    this.fs.copyTpl(
+      this.templatePath('package.json'),
+      this.destinationPath('package.json'),
+      {
+        // 设置应用程序名称.
+        name: this.determineAppname(),
+        // 设置作者使用名字.
+        author: this.git.name(),
+      }
+    );
+
+    /*
     var rePackage = this.fs.writeJSON(
       this.templatePath('package.json'),
       {
@@ -122,6 +137,7 @@ module.exports = class extends Generator {
     this.npmInstall(modules, { 'save-dev': true }, function() {
       this.log("结束安装 package...");
     });
+    */
 
   }
 
