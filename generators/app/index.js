@@ -28,8 +28,7 @@ module.exports = class extends Generator {
    * 初始化方法.
    */
   initializing() {
-    // 读取 Generator package.json 内容.
-    this.pkg = require('../package.json');
+    this.log("开始构建项目...");
   }
 
   /**

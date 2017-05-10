@@ -1,6 +1,6 @@
 {
   "name": "generator-reactweb",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "React WEB 项目包含基本：react15 + react-router + webpack2 + ES2015",
   "main": "index.js",
   "scripts": {
