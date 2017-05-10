@@ -62,29 +62,33 @@ module.exports = class extends Generator {
    */
   writing() {
 
-    this.log( this.fs["mkdirSync"] );
-
-    const filelist = [
-      'src',
-      '.babelrc',
-      '.eslintrc',
-      '.gitignore',
-      'webpack.config.js'
-    ];
-
-    filelist.map(item => (
-      this.fs.copy(
-        this.templatePath(item),
-        this.destinationPath(item)
-      )
-    ));
-
     fs.mkdirSync('dist');
 
     this.fs.copyTpl(
       this.templatePath('public/index.html'),
       this.destinationPath('public/index.html'),
       { title: 'Templating with Yeoman' }
+    );
+
+    this.fs.copy(
+      this.templatePath("src"),
+      this.destinationPath("src")
+    );
+    this.fs.copy(
+      this.templatePath("babelrc_tmpl"),
+      this.destinationPath(".babelrc")
+    );
+    this.fs.copy(
+      this.templatePath("eslintrc_tmpl"),
+      this.destinationPath(".eslintrc")
+    );
+    this.fs.copy(
+      this.templatePath("gitignore_tmpl"),
+      this.destinationPath(".gitignore")
+    );
+    this.fs.copy(
+      this.templatePath("webpack.config.js"),
+      this.destinationPath("webpack.config.js")
     );
 
   }
