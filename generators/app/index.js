@@ -72,12 +72,12 @@ module.exports = class extends Generator {
       'webpack.config.js'
     ];
 
-    filelist.map(function(item) {
+    filelist.map(item => (
       this.fs.copy(
         this.templatePath(item),
         this.destinationPath(item)
       );
-    });
+    ));
 
     fs.mkdirSync('dist');
 
