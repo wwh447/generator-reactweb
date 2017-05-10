@@ -1,0 +1,116 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'publish',
+1 verbose cli   '--access=public' ]
+2 info using npm@4.0.5
+3 info using node@v7.4.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/wangwenhong/www/generator-react-web',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/wangwenhong/.npm/generator-reactweb/1.0.8/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/wangwenhong/.npm correctMkdir not in flight; initializing
+10 info lifecycle generator-reactweb@1.0.8~prepublish: generator-reactweb@1.0.8
+11 silly lifecycle generator-reactweb@1.0.8~prepublish: no script for prepublish, continuing
+12 info lifecycle generator-reactweb@1.0.8~prepare: generator-reactweb@1.0.8
+13 silly lifecycle generator-reactweb@1.0.8~prepare: no script for prepare, continuing
+14 verbose tar pack [ '/Users/wangwenhong/.npm/generator-reactweb/1.0.8/package.tgz',
+14 verbose tar pack   '/Users/wangwenhong/www/generator-react-web' ]
+15 verbose tarball /Users/wangwenhong/.npm/generator-reactweb/1.0.8/package.tgz
+16 verbose folder /Users/wangwenhong/www/generator-react-web
+17 verbose addLocalTarball adding from inside cache /Users/wangwenhong/.npm/generator-reactweb/1.0.8/package.tgz
+18 verbose correctMkdir /Users/wangwenhong/.npm correctMkdir not in flight; initializing
+19 silly cache afterAdd generator-reactweb@1.0.8
+20 verbose afterAdd /Users/wangwenhong/.npm/generator-reactweb/1.0.8/package/package.json not in flight; writing
+21 verbose correctMkdir /Users/wangwenhong/.npm correctMkdir not in flight; initializing
+22 verbose afterAdd /Users/wangwenhong/.npm/generator-reactweb/1.0.8/package/package.json written
+23 silly publish { name: 'generator-reactweb',
+23 silly publish   version: '1.0.8',
+23 silly publish   description: 'React WEB 项目包含基本：react15 + react-router + webpack2 + ES2015',
+23 silly publish   main: 'index.js',
+23 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+23 silly publish   repository:
+23 silly publish    { type: 'git',
+23 silly publish      url: 'git+https://github.com/wwh447/generator-reactweb.git' },
+23 silly publish   homepage: 'https://github.com/wwh447/generator-reactweb',
+23 silly publish   bugs: { url: 'https://github.com/wwh447/generator-reactweb/issues' },
+23 silly publish   files: [ 'generators' ],
+23 silly publish   keywords: [ 'yeoman-generator' ],
+23 silly publish   author: { name: 'Eded.Wang' },
+23 silly publish   license: 'MIT',
+23 silly publish   dependencies: { 'yeoman-generator': '^1.1.1' },
+23 silly publish   readme: '# Generator ReactWEB Yeoman\n\n基础 React WEB 基础项目生成机器，外置 CSS 配置\n\n采用这样的开发环境：\n\n- React\n- React Router\n- Webpack\n- ES2015\n- Sass\n- ESLint\n',
+23 silly publish   readmeFilename: 'README.md',
+23 silly publish   gitHead: '8c89e97a24c907e579d5d626c4ee89559bbe2007',
+23 silly publish   _id: 'generator-reactweb@1.0.8',
+23 silly publish   _shasum: 'de4315e9dd11a65828258366b6ee5620222d942d',
+23 silly publish   _from: '.' }
+24 info lifecycle generator-reactweb@1.0.8~prepublishOnly: generator-reactweb@1.0.8
+25 silly lifecycle generator-reactweb@1.0.8~prepublishOnly: no script for prepublishOnly, continuing
+26 verbose getPublishConfig undefined
+27 silly mapToRegistry name generator-reactweb
+28 silly mapToRegistry using default registry
+29 silly mapToRegistry registry https://registry.npmjs.org/
+30 silly mapToRegistry data Result {
+30 silly mapToRegistry   raw: 'generator-reactweb',
+30 silly mapToRegistry   scope: null,
+30 silly mapToRegistry   escapedName: 'generator-reactweb',
+30 silly mapToRegistry   name: 'generator-reactweb',
+30 silly mapToRegistry   rawSpec: '',
+30 silly mapToRegistry   spec: 'latest',
+30 silly mapToRegistry   type: 'tag' }
+31 silly mapToRegistry uri https://registry.npmjs.org/generator-reactweb
+32 verbose publish registryBase https://registry.npmjs.org/
+33 silly publish uploading /Users/wangwenhong/.npm/generator-reactweb/1.0.8/package.tgz
+34 verbose request uri https://registry.npmjs.org/generator-reactweb
+35 verbose request sending authorization for write operation
+36 info attempt registry request try #1 at 15:15:42
+37 verbose request using bearer token for auth
+38 verbose request id cd0a28b4f784adf3
+39 http request PUT https://registry.npmjs.org/generator-reactweb
+40 http 403 https://registry.npmjs.org/generator-reactweb
+41 verbose headers { 'content-type': 'application/json',
+41 verbose headers   'cache-control': 'max-age=300',
+41 verbose headers   'content-length': '95',
+41 verbose headers   'accept-ranges': 'bytes',
+41 verbose headers   date: 'Wed, 10 May 2017 07:15:48 GMT',
+41 verbose headers   via: '1.1 varnish',
+41 verbose headers   connection: 'keep-alive',
+41 verbose headers   'x-served-by': 'cache-nrt6129-NRT',
+41 verbose headers   'x-cache': 'MISS',
+41 verbose headers   'x-cache-hits': '0',
+41 verbose headers   'x-timer': 'S1494400548.543296,VS0,VE626',
+41 verbose headers   vary: 'Accept-Encoding' }
+42 verbose request invalidating /Users/wangwenhong/.npm/registry.npmjs.org/generator-reactweb on PUT
+43 error publish Failed PUT 403
+44 verbose stack Error: "You cannot publish over the previously published version 1.0.8." : generator-reactweb
+44 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+44 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+44 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+44 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:186:22)
+44 verbose stack     at emitTwo (events.js:106:13)
+44 verbose stack     at Request.emit (events.js:191:7)
+44 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1081:10)
+44 verbose stack     at emitOne (events.js:96:13)
+44 verbose stack     at Request.emit (events.js:188:7)
+44 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1001:12)
+45 verbose statusCode 403
+46 verbose pkgid generator-reactweb
+47 verbose cwd /Users/wangwenhong/www/generator-react-web
+48 error Darwin 16.5.0
+49 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--access=public"
+50 error node v7.4.0
+51 error npm  v4.0.5
+52 error code E403
+53 error "You cannot publish over the previously published version 1.0.8." : generator-reactweb
+54 error If you need help, you may report this error at:
+54 error     <https://github.com/npm/npm/issues>
+55 verbose exit [ 1, true ]
