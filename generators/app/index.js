@@ -37,7 +37,7 @@ module.exports = class extends Generator {
   configuring() {
 
     // 获取 package 配置模板.
-    let defaultSettings = this.fs.readJSON('package.json');
+    let defaultSettings = this.fs.readJSON( this.templatePath('package.json') );
     // 做新 package 配置文件.
     let packageSettings = {
       name: this.appName,
