@@ -62,34 +62,30 @@ module.exports = class extends Generator {
    */
   writing() {
 
-    // 排除名单.
-    const excludeList = [
-      //'public',
-      'README.md',
-      'node_modules',
-      'package.json'
+    this.log( this.fs.mkdirSync );
+
+    const filelist = [
+      'src',
+      '.babelrc',
+      '.eslintrc',
+      '.gitignore',
+      'webpack.config.js'
     ];
 
-    /*
+    filelist.map(function(item) {
+      this.fs.copy(
+        this.templatePath(item),
+        this.destinationPath(item)
+      );
+    });
+
+    fs.mkdirSync('dist');
+
     this.fs.copyTpl(
       this.templatePath('public/index.html'),
       this.destinationPath('public/index.html'),
       { title: 'Templating with Yeoman' }
     );
-    */
-
-    fs.readdir(this.sourceRoot(), (err, items) => {
-      for(let item of items) {
-
-        // 如果文件在排除名单中，跳过这个文件
-        if(excludeList.indexOf(item) !== -1) {
-          continue;
-        }
-
-        // 将所有文件复制到我们的根目录
-        this.bulkDirectory(item, item);
-      }
-    });
 
   }
 
