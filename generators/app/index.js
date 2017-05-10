@@ -2,11 +2,13 @@
 
 // 创建 yeoman generator 的核心功能模块.
 const Generator = require('yeoman-generator');
+
 // 文件读写模块.
 const fs = require('fs');
+// 路径模块
 const path = require('path');
-// 文件读写模块，比 fs 模块多了 promise 支持.
-//const fse = require('fs-extra');
+
+// PS: fs 和 path 是 NodeJS 的核心模块，无需安装.
 
 /**
  * Base generator.
@@ -18,7 +20,7 @@ module.exports = class extends Generator {
     // 继承必须.
     super(args, opts);
 
-    // 获取 AppName.
+    // 获取 AppName，使用路径尾.
     this.appName = path.basename(process.cwd());
     // 设置 Author.
     this.appAuthor = "Eded.Wang";
@@ -62,13 +64,17 @@ module.exports = class extends Generator {
    */
   writing() {
 
+    // 创建 dist 空目录.
     fs.mkdirSync('dist');
-
+    // 拷贝入口页.
+    // copyTpl 允许使用 EJS 模板引擎替换内容
     this.fs.copyTpl(
       this.templatePath('public/index.html'),
       this.destinationPath('public/index.html'),
       { title: 'Templating with Yeoman' }
     );
+
+    /* 拷贝所需的文件. */
 
     this.fs.copy(
       this.templatePath("src"),
